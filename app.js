@@ -19,8 +19,8 @@ app.get('/api', (req, res) => {
         current_day: getCurrentDay(),
         utc_time: getCurrentUTCWithinRange(),
         track: track,
-        github_file_url: "to be updated",
-        github_repo_url: "to be updated",
+        github_file_url: "https://github.com/SoftwareSultanDavid/zuriboard_backend_stage_one.git",
+        github_repo_url: "https://github.com/SoftwareSultanDavid/zuriboard_backend_stage_one",
         status_code: statusCode
     }
 
