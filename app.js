@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const { getCurrentUTCWithinRange, getCurrentDay } = require('./date');
+const { formatDateToUTC, getCurrentDay } = require('./date');
 
 app.get('/api', (req, res) => {
     const slack_name = req.query.slack_name;
@@ -16,7 +16,7 @@ app.get('/api', (req, res) => {
     const result = {
         slack_name: slack_name,
         current_day: getCurrentDay(),
-        utc_time: getCurrentUTCWithinRange(),
+        utc_time: formatDateToUTC(),
         track: track,
         github_file_url: "https://github.com/SoftwareSultanDavid/zuriboard_backend_stage_one.git",
         github_repo_url: "https://github.com/SoftwareSultanDavid/zuriboard_backend_stage_one",
